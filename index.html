@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Tech News Pulse</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech News</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <header>
-    <h1>⚡ Tech News Pulse</h1>
+  <h1>Tech News</h1>
 
-    <input type="text" id="search" placeholder="Search news...">
-
-    <div>
-      <button onclick="filterCategory('all')">All</button>
-      <button onclick="filterCategory('ai')">AI</button>
-      <button onclick="filterCategory('crypto')">Crypto</button>
-      <button onclick="filterCategory('gadgets')">Gadgets</button>
-    </div>
-
-    <button id="toggleMode">🌙 Toggle Mode</button>
-  </header>
-
-  <section>
-    <h3>📰 Latest News</h3>
-    <div id="news-container"></div>
-  </section>
-
-  <section>
-    <h3>⭐ Saved News</h3>
-    <div id="saved-container"></div>
-  </section>
+  <div id="news-container"></div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
