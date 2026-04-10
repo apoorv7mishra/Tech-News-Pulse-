@@ -1,5 +1,4 @@
-const API_KEY = "3c7f67584eba4a24b858b09c403ea252";
-const API_URL = `https://newsapi.org/v2/top-headlines?category=technology&language=en&pageSize=20&apiKey=${API_KEY}`;
+const API_URL = "http://localhost:3000/api/news";
 
 let allArticles = [];
 
