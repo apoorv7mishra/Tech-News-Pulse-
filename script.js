@@ -7,11 +7,20 @@ async function fetchNews() {
   try {
     const res = await fetch(API_URL);
     const data = await res.json();
+    
+    if (!res.ok || data.status === "error") {
+      throw new Error(data.message || `API Error: ${res.status}`);
+    }
+    
+    if (!data.articles || data.articles.length === 0) {
+      throw new Error("No articles found");
+    }
+    
     allArticles = data.articles;
     displayNews(allArticles);
   } catch (err) {
     console.error("Error fetching news:", err);
-    document.getElementById("news-container").textContent = "Failed to load news.";
+    document.getElementById("news-container").textContent = `Failed to load news: ${err.message}`;
   }
 }
 
